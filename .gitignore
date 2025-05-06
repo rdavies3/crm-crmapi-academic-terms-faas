@@ -1,0 +1,54 @@
+# ----------------------------
+# Node.js
+# ----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# Optional build output
+dist/
+build/
+
+# dotenv
+**/.env
+
+# ----------------------------
+# AWS SAM / Serverless
+# ----------------------------
+.aws-sam/
+.sam/
+event.json
+# Local environment files
+env.*.json
+.env.json
+
+# SAM CLI generated files
+samconfig.toml
+
+# ----------------------------
+# Terraform
+# ----------------------------
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# ----------------------------
+# VSCode and Editor settings
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
