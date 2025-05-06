@@ -1,0 +1,10 @@
+{
+  "name": "term-get-handler",
+  "version": "1.0.0",
+  "description": "Lambda for GET /terms → builds SOQL, invokes sf-query, and returns raw array",
+  "main": "app.mjs",
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-lambda": "^3.400.0"
+  }
+}

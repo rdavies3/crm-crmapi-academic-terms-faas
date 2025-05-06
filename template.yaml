@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+
+Parameters:
+  Stage:
+    Type: String
+    Default: sandbox
+
+Globals:
+  Function:
+    Runtime: nodejs18.x
+    Timeout: 10
+
+Resources:
+
+  # Your HTTP API definition
+  TermApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: !Ref Stage
+      DefinitionUri: openapi/term-api.yaml
+
+  # The Lambda that handles GET /terms
+  TermGetFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambdas/term-get-handler/
+      Handler: app.handler
+      Environment:
+        Variables:
+          # used by the code to invoke your sf-query Lambda
+          SF_QUERY_LAMBDA_NAME: !Sub "sf-query-${Stage}"
+      Policies:
+        # Grants lambda:InvokeFunction on sf-query-${Stage}
+        - LambdaInvokePolicy:
+            FunctionName: !Sub "sf-query-${Stage}"
+      Events:
+        GetTerms:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref TermApi
+            Path: /terms
+            Method: GET

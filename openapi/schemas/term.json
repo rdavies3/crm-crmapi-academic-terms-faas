@@ -1,0 +1,98 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "ASU Salesforce Enterprise Academic Terms",
+    "properties": {
+        "termId": {
+            "type": "string",
+            "description": "Term unique Id",
+            "title": "Term__c.Id",
+            "example": "a0Jd000000U7lzDEAR"
+        },
+        "aidYear": {
+            "type": "string",
+            "title": "Term__c.Aid_Year__c",
+            "description": "Financail Aid year associated with term.",
+            "example": "2025"
+        },
+        "name": {
+            "type": "string",
+            "title": "Term__c.Name",
+            "description": "The term name.",
+            "example": "2025 Fall"
+        },
+        "ownerId": {
+            "type": "string",
+            "title": "Term__c.OwnerId",
+            "description": "Relationship record owner Id.",
+            "example": "005d0000002dYZgAAM"
+        },
+        "ownerName": {
+            "type": "string",
+            "title": "Term__c.Owner.Name",
+            "description": "Relationship record owner name.",
+            "example": "API ASU DBAMP"
+        },
+        "sessionAcCloseDate": {
+            "title": "Term__c.Session_A_C_Close_Date__c",
+            "description": "Sessions A or C close date.",
+            "type": "string",
+            "format": "date"
+        },
+        "sessionAcStartDate": {
+            "title": "Term__c.Session_A_C_Start_Date__c",
+            "description": "Sessions A or C start date.",
+            "type": "string",
+            "format": "date"
+        },
+        "sessionBCloseDate": {
+            "title": "Term__c.Session_A_C_Close_Date__c",
+            "description": "Session B close date.",
+            "type": "string",
+            "format": "date"
+        },
+        "sessionBStartDate": {
+            "title": "Term__c.Session_A_C_Start_Date__c",
+            "description": "Session B start date.",
+            "type": "string",
+            "format": "date"
+        },
+        "semester": {
+            "type": "string",
+            "title": "Term__c.Semester__c",
+            "description": "Spring, Fall or Summer semesters",
+            "example": "Fall"
+        },
+        "strm": {
+            "type": "string",
+            "title": "Term__c.PeopleSoft_Code__c",
+            "description": "The person Id tracked on this Relationship Record. Used in Contact to Account and Contact to Contact Relationships.",
+            "example": "003d000003IHmcSAAT"
+        },
+        "termBeginDate": {
+            "title": "Term__c.Session_A_C_Close_Date__c",
+            "description": "Term begin date.",
+            "type": "string",
+            "format": "date"
+        },
+        "termEndDate": {
+            "title": "Term__c.Session_A_C_Start_Date__c",
+            "description": "Term end date.",
+            "type": "string",
+            "format": "date"
+        },
+        "termStatus": {
+            "type": "boolean",
+            "title": "Term__c.Term_Status__c",
+            "description": "Is this term activated?",
+            "example": false
+        },
+        "year": {
+            "type": "string",
+            "title": "Term__c.Year__c",
+            "description": "Academic Year.",
+            "example": "2025"
+        }
+    }
+}

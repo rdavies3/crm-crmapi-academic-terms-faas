@@ -1,0 +1,25 @@
+openapi: 3.0.1
+info:
+  title: Terms API
+  version: 1.0.0
+
+paths:
+  /terms:
+    get:
+      operationId: getTerms
+      parameters:
+        - name: strm
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: array of term objects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "./schemas/term.json"
+`~`
