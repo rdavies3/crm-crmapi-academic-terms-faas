@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Query parameters for ASU Salesforce Enterprise Academic Term Object",
+    "title": "Term__c",
+    "type": "object",
+    "properties": {
+        "strm": {
+            "title": "PeopleSoft_Code__c",
+            "description": "PeopleSoft STRM Term Code.",
+            "example": "2257",
+            "minLength": 4,
+            "maxLength": 4,
+            "type": "string"
+        }
+    }
+}
